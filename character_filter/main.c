@@ -35,7 +35,7 @@ main(void)
     char data[LENGTH];
     void *buffer;
 
-    if((buffer = malloc(BUFFER_SIZE)) == NULL) {
+    if((buffer = calloc(BUFFER_SIZE, 1)) == NULL) {
         fprintf(stderr, "Cannot allocate memory!\n");
         exit(EXIT_FAILURE);
     }

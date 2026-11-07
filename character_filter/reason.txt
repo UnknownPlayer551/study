@@ -1,0 +1,6 @@
+value = "Hello, WORLD!" # has '\0' in the end
+buffer[void], size = 512
+data[char], size = 64
+
+strlcpy(data, value, data.size) # stop after '\0', the rest is [AK>?{'....]
+filter_upper(data, buffer, data.size, buffer.size) # set data to 'HWORLD'
